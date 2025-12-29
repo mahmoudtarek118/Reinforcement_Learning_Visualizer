@@ -1,0 +1,74 @@
+.home {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #00d9ff, #00ff88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.algorithms {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.category-desc {
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.algorithm-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.algorithm-card {
+    background: linear-gradient(145deg, #1e1e2e, #252535);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.algorithm-card:hover {
+    transform: translateY(-4px);
+    border-color: #00d9ff;
+    box-shadow: 0 8px 30px rgba(0, 217, 255, 0.15);
+}
+
+.algorithm-card h3 {
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.algorithm-card p {
+    color: #888;
+    margin: 0;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,54 @@
+.gridworld-canvas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.gridworld-canvas {
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gridworld-legend {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.legend-color.start {
+    background: rgba(0, 217, 255, 0.3);
+    border: 2px solid #00d9ff;
+}
+
+.legend-color.goal {
+    background: rgba(0, 255, 136, 0.3);
+    border: 2px solid #00ff88;
+}
+
+.legend-color.agent {
+    background: #00d9ff;
+    border: 2px solid #fff;
+    box-shadow: 0 0 6px rgba(0, 217, 255, 0.5);
+}
+
+.legend-color.hole {
+    background: rgba(30, 60, 90, 0.9);
+    border: 2px solid #4a90d9;
+}

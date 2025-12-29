@@ -1,0 +1,345 @@
+/* Shared styles for all algorithm pages */
+
+.algorithm-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #333;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #00d9ff, #00ff88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-header p {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+/* Algorithm Description */
+.algorithm-description {
+    background: linear-gradient(145deg, #1a1a2e, #1e1e30);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.algorithm-description h2 {
+    font-size: 1.1rem;
+    color: #00d9ff;
+    margin: 0 0 1rem 0;
+}
+
+.algorithm-description p {
+    color: #ccc;
+    line-height: 1.7;
+    margin: 0.75rem 0;
+}
+
+.formula {
+    background: #0f0f1a;
+    border-left: 3px solid #00d9ff;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    font-family: 'Courier New', monospace;
+    color: #00ff88;
+    font-size: 1rem;
+}
+
+.key-points {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.key-points li {
+    color: #bbb;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.steps-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.steps-list li {
+    color: #bbb;
+    margin: 0.75rem 0;
+    line-height: 1.6;
+}
+
+.comparison {
+    margin-top: 1.5rem;
+}
+
+.comparison table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.comparison th,
+.comparison td {
+    padding: 0.5rem;
+    border: 1px solid #333;
+    text-align: center;
+    color: #ccc;
+}
+
+.comparison th {
+    background: #1a1a2e;
+    color: #00d9ff;
+}
+
+/* Page Content Grid */
+.page-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+    .page-content {
+        grid-template-columns: 320px 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .controls-section {
+        grid-row: span 2;
+    }
+}
+
+/* Sections */
+.controls-section,
+.visualization-section,
+.diagnostics-section {
+    background: linear-gradient(145deg, #1e1e2e, #252535);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.controls-section h2,
+.visualization-section h2,
+.diagnostics-section h2 {
+    font-size: 1rem;
+    color: #00d9ff;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
+}
+
+/* Controls */
+.control-group {
+    margin-bottom: 1rem;
+}
+
+.control-group label {
+    display: block;
+    color: #aaa;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+}
+
+.control-group input,
+.control-group select {
+    width: 100%;
+}
+
+.run-button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, #00d9ff, #00ff88);
+    color: #0f0f1a;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.run-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
+}
+
+.run-button:disabled {
+    background: #333;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Visualization */
+.visualization-section {
+    min-height: 400px;
+}
+
+.visualization-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    min-height: 350px;
+}
+
+.placeholder-viz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 300px;
+}
+
+.placeholder-viz>p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.placeholder-grid {
+    display: grid;
+    gap: 4px;
+    background: #1a1a2e;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.placeholder-cell {
+    width: 50px;
+    height: 50px;
+    background: #252535;
+    border: 1px solid #333;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.placeholder-cell:first-child {
+    background: rgba(0, 217, 255, 0.1);
+    border-color: #00d9ff;
+    color: #00d9ff;
+}
+
+.placeholder-cell:last-child {
+    background: rgba(0, 255, 136, 0.1);
+    border-color: #00ff88;
+    color: #00ff88;
+}
+
+/* Diagnostics */
+.diagnostics-section {
+    min-height: 150px;
+}
+
+.diagnostics-placeholder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.diagnostic-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+}
+
+.diagnostic-item .label {
+    color: #888;
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+}
+
+.diagnostic-item .value {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Control Buttons */
+.control-buttons {
+    margin-top: 1rem;
+}
+
+.button-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.run-button.pause {
+    background: linear-gradient(135deg, #ff9500, #ffcc00);
+}
+
+.step-button,
+.reset-button,
+.stop-button {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    border: 1px solid #333;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.step-button {
+    background: #1a1a2e;
+    color: #00d9ff;
+    border-color: #00d9ff;
+}
+
+.step-button:hover:not(:disabled) {
+    background: rgba(0, 217, 255, 0.1);
+}
+
+.step-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.reset-button {
+    background: #1a1a2e;
+    color: #888;
+    border-color: #444;
+}
+
+.reset-button:hover {
+    color: #fff;
+    border-color: #666;
+}
+
+.stop-button {
+    background: rgba(255, 107, 107, 0.1);
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+.stop-button:hover {
+    background: rgba(255, 107, 107, 0.2);
+}
+
+/* Error Message */
+.error-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid #ff6b6b;
+    border-radius: 6px;
+    color: #ff6b6b;
+    font-size: 0.85rem;
+}

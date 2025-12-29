@@ -1,0 +1,9 @@
+.learning-curve {
+    background: #1a1a2e;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.learning-curve-canvas {
+    display: block;
+}

@@ -1,0 +1,107 @@
+.visualization-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.viz-main {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.viz-grid,
+.viz-values,
+.viz-policy,
+.viz-curve {
+    background: #1a1a2e;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.viz-grid h3,
+.viz-values h3,
+.viz-policy h3,
+.viz-curve h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: 500;
+}
+
+/* Value Grid */
+.value-grid {
+    display: grid;
+    gap: 2px;
+}
+
+.value-cell {
+    padding: 0.4rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-family: monospace;
+    border-radius: 4px;
+    color: #fff;
+    min-width: 35px;
+}
+
+.value-cell.positive {
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.value-cell.negative {
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.value-legend {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    color: #666;
+}
+
+.legend-negative {
+    color: #ff6b6b;
+}
+
+.legend-positive {
+    color: #00ff88;
+}
+
+/* Policy Grid */
+.policy-grid {
+    display: grid;
+    gap: 2px;
+}
+
+.policy-cell {
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    background: #252535;
+    border-radius: 4px;
+    color: #00d9ff;
+    min-width: 35px;
+}
+
+.policy-cell.goal {
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    font-weight: bold;
+}
+
+/* Learning Curve */
+.viz-curve {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .viz-main {
+        flex-direction: column;
+        align-items: center;
+    }
+}

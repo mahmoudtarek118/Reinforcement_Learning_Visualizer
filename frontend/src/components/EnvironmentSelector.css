@@ -1,0 +1,39 @@
+.environment-selector {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+.env-description {
+    display: block;
+    color: #666;
+    font-size: 0.75rem;
+    margin-top: 0.4rem;
+    font-style: italic;
+}
+
+.config-fields {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #333;
+}
+
+.validation-errors {
+    margin-top: 0.75rem;
+}
+
+.validation-errors .error {
+    display: block;
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    margin: 0.25rem 0;
+}
+
+.no-environments {
+    color: #ff9500;
+    font-size: 0.85rem;
+    padding: 0.75rem;
+    background: rgba(255, 149, 0, 0.1);
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
