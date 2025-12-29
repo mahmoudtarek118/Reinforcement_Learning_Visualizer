@@ -11,6 +11,13 @@ An interactive web-based tool for learning reinforcement learning algorithms wit
 
 ## Quick Start
 
+### Clone the Repository
+
+```bash
+git clone https://github.com/mahmoudtarek118/Reinforcement_Learning_Visualizer.git
+cd Reinforcement_Learning_Visualizer
+```
+
 ### Backend (FastAPI)
 
 ```bash
