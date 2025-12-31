@@ -10,13 +10,16 @@ import SARSA from './pages/SARSA';
 import QLearning from './pages/QLearning';
 import './App.css';
 
+// Get base path for GitHub Pages deployment
+const basename = import.meta.env.BASE_URL || '/';
+
 /**
  * Main App component with routing.
  * Each algorithm has its own dedicated page.
  */
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -34,3 +37,4 @@ function App() {
 }
 
 export default App;
+
