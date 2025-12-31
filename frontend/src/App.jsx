@@ -10,8 +10,8 @@ import SARSA from './pages/SARSA';
 import QLearning from './pages/QLearning';
 import './App.css';
 
-// Get base path for GitHub Pages deployment
-const basename = import.meta.env.BASE_URL || '/';
+// Get base path for GitHub Pages deployment (remove trailing slash for React Router)
+const basename = import.meta.env.BASE_URL?.replace(/\/$/, '') || '';
 
 /**
  * Main App component with routing.
