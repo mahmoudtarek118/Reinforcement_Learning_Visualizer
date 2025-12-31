@@ -21,10 +21,15 @@ from backend.algorithms.q_learning import QLearning
 
 app = FastAPI(title="RL Learning Tool API", version="1.0.0")
 
-# CORS middleware
+# CORS middleware - allows frontend from any origin for deployment flexibility
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "*"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://mahmoudtarek118.github.io",  # GitHub Pages
+        "*"  # Allow all origins for maximum compatibility
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

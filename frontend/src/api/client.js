@@ -2,7 +2,11 @@
  * API client for the RL Learning Tool backend.
  */
 
-const API_BASE = 'http://localhost:8000/api';
+// Use environment variable for production, fallback to localhost for development
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
+const API_ROOT = import.meta.env.VITE_API_URL
+    ? import.meta.env.VITE_API_URL.replace('/api', '')
+    : 'http://localhost:8000';
 
 /**
  * Make API request with error handling.
@@ -141,9 +145,10 @@ export async function getAlgorithms() {
  */
 export async function healthCheck() {
     try {
-        const response = await fetch('http://localhost:8000/');
+        const response = await fetch(`${API_ROOT}/`);
         return response.ok;
     } catch {
         return false;
     }
 }
+
